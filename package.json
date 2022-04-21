@@ -1,7 +1,14 @@
 {
   "name": "sebsite",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "license": "Unlicensed",
+  "author": {
+    "name": "Sebastian Fries",
+    "email": "sebastianfries@outlook.com",
+    "url": "https://github.com/frse97"
+  },
+  "homepage": "https://frse97.github.io/sebastianfries",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
@@ -11,6 +18,7 @@
     "@types/react": "^18.0.5",
     "@types/react-dom": "^18.0.1",
     "classnames": "^2.3.1",
+    "gh-pages": "^3.2.3",
     "node-sass": "^7.0.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -22,7 +30,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploygithub": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
