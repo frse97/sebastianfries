@@ -1,0 +1,113 @@
+.container {
+  width: 200px;
+  height: 200px;
+  perspective: 400px;
+
+  .cube {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(-100px);
+    transition: transform 2s;
+  }
+
+  .cube-face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    line-height: 200px;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+  }
+
+  .cube.show-front {
+    transform: translateZ(-100px) rotateY(0deg);
+  }
+  .cube.show-back {
+    transform: translateZ(-100px) rotateY(-180deg);
+  }
+  .cube.show-top {
+    transform: translateZ(-100px) rotateX(-90deg);
+  }
+  .cube.show-bottom {
+    transform: translateZ(-100px) rotateX(90deg);
+  }
+  .cube.show-left {
+    transform: translateZ(-100px) rotateY(90deg);
+  }
+  .cube.show-right {
+    transform: translateZ(-100px) rotateY(-90deg);
+  }
+
+  // Spinning
+  .cube.is-spinning {
+    animation: spinCube 12s infinite ease-in-out;
+    animation-fill-mode: both;
+  }
+
+  .cube-face-front {
+    background: var(--primary-color);
+  }
+  .cube-face-back {
+    background: var(--primary-color);
+  }
+
+  .cube-face-top {
+    background: var(--primary-color);
+  }
+  .cube-face-bottom {
+    background: var(--primary-color);
+  }
+
+  .cube-face-left {
+    background: var(--primary-color);
+  }
+  .cube-face-right {
+    background: var(--primary-color);
+  }
+
+  .cube-face-front {
+    transform: rotateY(0deg) translateZ(100px);
+  }
+  .cube-face-back {
+    transform: rotateY(180deg) translateZ(100px);
+  }
+  .cube-face-top {
+    transform: rotateX(90deg) translateZ(100px);
+  }
+  .cube-face-bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+  }
+  .cube-face-left {
+    transform: rotateY(-90deg) translateZ(100px);
+  }
+  .cube-face-right {
+    transform: rotateY(90deg) translateZ(100px);
+  }
+}
+
+@keyframes spinCube {
+  0% {
+    transform: translateZ(-100px) rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: translateZ(-100px) rotateX(360deg) rotateY(360deg);
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
