@@ -16,7 +16,7 @@
 }
 
 .profile-picture {
-  transform: scale(2);
+  transform: scale(1.6);
   width: 200px;
   height: 200px;
   box-sizing: border-box;
@@ -27,7 +27,7 @@
   transition: all ease 3.2s;
 
   .profile__group {
-    left: -8px;
+    left: -12px;
   }
 }
 

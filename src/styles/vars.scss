@@ -1,0 +1,16 @@
+[data-vars="frse"] {
+  // Header
+  --header-h: 80px;
+  // Footer
+  --footer-h: 80px;
+  // Main
+  --main-h: calc(100vh - var(--header-h) - var(--footer-h));
+}
+
+/**
+* This method is used to convert px to rem
+*/
+@function toRem($base) {
+  $result: $base * 0.0625rem;
+  @return $result;
+}

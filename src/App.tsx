@@ -1,11 +1,15 @@
 import React from "react";
 import "./App.scss";
-import { FrseAvatar } from "./components/FrseAvatar";
+import { FrseHeader, FrseAvatar, FrseMain, FrseFooter } from "./components";
 
 const App: React.FC = () => {
   return (
     <div className="app">
-      <FrseAvatar />
+      <FrseHeader />
+      <FrseMain>
+        <FrseAvatar />
+      </FrseMain>
+      <FrseFooter />
     </div>
   );
 };
