@@ -4,6 +4,7 @@
 
 - Smooth effect when stopping the cube rotation
 - Don't switch face when animation starts
+- Train goes over all different pages (props for benni94 for the idea)
 
 ## Deep Linking (nice to have) 🔗
 

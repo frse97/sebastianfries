@@ -11,22 +11,19 @@ import "../src/styles/vars.scss";
 type RenderCallBackPhases = "mount" | "update";
 
 const onRenderCallback = (id: string, phase?: RenderCallBackPhases) => {
-  if (phase === "mount") {
-    document.documentElement.setAttribute("data-theme", "light");
-    document.documentElement.setAttribute("data-vars", "frse");
-    if (process.env.NODE_ENV !== "production") {
-      console.log(
-        "initialisation",
-        `App ${id} was mounted. Theme set to light.`
-      );
-    }
-  }
+  console.log("PHASE", phase, id);
+  // if (phase === "mount") {
+  //   document.documentElement.setAttribute("data-theme", "light");
+  //   document.documentElement.setAttribute("data-vars", "frse");
+  // }
 };
 
 // Get DOM element to render the app in.
 const container = document.getElementById("root")!;
+
 // Create a root
 const root = ReactDOMClient.createRoot(container);
+
 // Initial render
 root.render(
   <Profiler id="frse-profiler" onRender={onRenderCallback}>
