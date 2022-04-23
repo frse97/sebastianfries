@@ -131,7 +131,7 @@ const FrseCube: React.FC<IFrseCube> = (props) => {
       </div>
       <div className="buttons">
         <button onClick={handleOnSpin}>
-          {isSpinning ? "Stop spinning" : "Start stopping"}
+          {isSpinning ? "Stop spinning" : "Start spinning"}
         </button>
       </div> */}
     </>

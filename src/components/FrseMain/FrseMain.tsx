@@ -1,17 +1,28 @@
-import React, { ReactNode } from "react";
+import React from "react";
+import { FrseActions } from "../FrseActions";
+import { FrseCube } from "../FrseCube";
 import "./FrseMain.scss";
 
-interface IFrseMain {
-  /**
-   * The children of the component
-   */
-  children?: ReactNode;
-}
+interface IFrseMain {}
 
 const FrseMain: React.FC<IFrseMain> = (props) => {
-  const { children } = props;
-
-  return <main className="frse-main">{children}</main>;
+  return (
+    <main className="frse-main">
+      <div className="frse-main-cube">
+        <FrseCube
+          front="FRONT"
+          back="BACK"
+          top="TOP"
+          bottom="BOTTOM"
+          left="LEFT"
+          right="RIGHT"
+        />
+      </div>
+      <div className="frse-main-actions">
+        <FrseActions />
+      </div>
+    </main>
+  );
 };
 
 export default FrseMain;

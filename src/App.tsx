@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./App.scss";
-import { FrseHeader, FrseMain, FrseFooter, FrseCube } from "./components";
+import { FrseHeader, FrseMain, FrseFooter } from "./components";
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -11,9 +11,7 @@ const App: React.FC = () => {
   return (
     <div className="app">
       <FrseHeader />
-      <FrseMain>
-        <FrseCube />
-      </FrseMain>
+      <FrseMain />
       <FrseFooter />
     </div>
   );

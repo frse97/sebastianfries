@@ -3,8 +3,12 @@
   --header-h: 80px;
   // Footer
   --footer-h: 80px;
-  // Main
-  --main-h: calc(100vh - var(--header-h) - var(--footer-h));
+  // Main Actions container
+  --main-actions: 80px;
+  // Main Cube container
+  --main-cube: calc(
+    100vh - var(--header-h) - var(--footer-h) - var(--main-actions)
+  );
 }
 
 /**

@@ -1,11 +1,28 @@
+// Setup vars
+[data-vars="frse"] {
+  --cube-perspective: calc(var(--cube-size) * 2);
+  --translate-z-cube: calc(var(--cube-size) / 2);
+  --translate-z-cube-pos: calc(var(--cube-size) / 2);
+}
+@media (max-width: 320px) {
+  [data-vars="frse"] {
+    --cube-size: 232px;
+  }
+}
+@media (min-width: 360px) {
+  [data-vars="frse"] {
+    --cube-size: 272px;
+  }
+}
+
 .container {
-  width: 200px;
-  height: 200px;
+  width: var(--cube-size);
+  height: var(--cube-size);
   perspective: 400px;
 
   .cube {
-    width: 200px;
-    height: 200px;
+    width: var(--cube-size);
+    height: var(--cube-size);
     position: relative;
     transform-style: preserve-3d;
     transform: translateZ(-100px);
@@ -14,10 +31,10 @@
 
   .cube-face {
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: var(--cube-size);
+    height: var(--cube-size);
     border: 1px solid black;
-    line-height: 200px;
+    line-height: var(--cube-size);
     font-size: 40px;
     font-weight: bold;
     color: white;
@@ -99,15 +116,15 @@
   }
 }
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-}
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-}
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-}
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-}
+// // Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) {
+// }
+// // Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) {
+// }
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) {
+// }
+// // Extra large devices (large desktops, 1var(--cube-size) and up)
+// @media (min-width: 1var(--cube-size)) {
+// }

@@ -1,7 +1,21 @@
 .frse-main {
-  height: var(--main-h);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  // Cube container
+  &-cube {
+    width: 100%;
+    height: var(--main-cube);
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-actions {
+    width: 100%;
+    height: var(--main-actions);
+    background-color: green;
+  }
 }
