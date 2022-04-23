@@ -1,6 +1,16 @@
 .frse-header {
   height: var(--header-h);
   width: 100%;
-  background-color: var(--primary-color);
-  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--txt-color);
+  background-color: var(--bg-color-header);
+
+  font-size: 48px;
+  font-family: "Allison", cursive;
+
+  box-shadow: 0px 0px 8px 4px #cccccc;
 }

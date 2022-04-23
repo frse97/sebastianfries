@@ -1,9 +1,19 @@
-[data-theme="light"] {
-  --bg-color: white;
+[data-vars="frse"] {
+  --light: #fcfcfc;
+  --dark: #2e2e2e;
   --primary-color: #e14571;
+  --primary-color-light: #e4577f;
+  --primary-color-dark: #ca3e65;
+}
+
+[data-theme="light"] {
+  // Header
+  --bg-color-header: #fcfcfc;
+  --txt-color: #121212;
 }
 
 [data-theme="dark"] {
-  --bg-color: black;
-  --primary-color: #e14571;
+  // Header
+  --bg-color-header: #2e2e2e;
+  --txt-color: #fff;
 }
