@@ -1,5 +1,6 @@
 import React, { memo } from "react";
 import { FrseActions } from "../FrseActions";
+import { FrseAvatar } from "../FrseAvatar";
 import { FrseCube } from "../FrseCube";
 import "./FrseMain.scss";
 
@@ -10,7 +11,20 @@ const FrseMain: React.FC<IFrseMain> = (props) => {
     <main className="frse-main">
       <div className="frse-main-cube">
         <FrseCube
-          front="FRONT"
+          front={
+            <div
+              style={{
+                position: "relative",
+                width: "100%",
+                height: "100%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <FrseAvatar />
+            </div>
+          }
           back="BACK"
           top="TOP"
           bottom="BOTTOM"
