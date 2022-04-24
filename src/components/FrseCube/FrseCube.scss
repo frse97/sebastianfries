@@ -9,11 +9,53 @@
 // Animations needs fix values since css vars don't work
 @keyframes spinCube {
   0% {
-    transform: translateZ(-280px) rotateX(0deg) rotateY(0deg);
+    transform: translateZ(-140px) rotateX(0deg) rotateY(0deg);
   }
   100% {
-    transform: translateZ(-280px) rotateX(720deg) rotateY(720deg);
+    transform: translateZ(-140px) rotateX(720deg) rotateY(720deg);
   }
+}
+
+.cube {
+  transform: translateZ(-140px);
+}
+
+.cube.show-front {
+  transform: translateZ(-140px) rotateY(0deg);
+}
+.cube.show-back {
+  transform: translateZ(-140px) rotateY(-180deg);
+}
+.cube.show-top {
+  transform: translateZ(-140px) rotateX(-90deg);
+}
+.cube.show-bottom {
+  transform: translateZ(-140px) rotateX(90deg);
+}
+.cube.show-left {
+  transform: translateZ(-140px) rotateY(90deg);
+}
+.cube.show-right {
+  transform: translateZ(-140px) rotateY(-90deg);
+}
+
+.cube-face-front {
+  transform: rotateY(0deg) translateZ(140px);
+}
+.cube-face-back {
+  transform: rotateY(180deg) translateZ(140px);
+}
+.cube-face-top {
+  transform: rotateX(90deg) translateZ(140px);
+}
+.cube-face-bottom {
+  transform: rotateX(-90deg) translateZ(140px);
+}
+.cube-face-left {
+  transform: rotateY(-90deg) translateZ(140px);
+}
+.cube-face-right {
+  transform: rotateY(90deg) translateZ(140px);
 }
 
 @media (min-width: 360px) {
@@ -23,12 +65,67 @@
 
   @keyframes spinCube {
     0% {
-      transform: translateZ(-320px) rotateX(0deg) rotateY(0deg);
+      transform: translateZ(-160px) rotateX(0deg) rotateY(0deg);
     }
     100% {
-      transform: translateZ(-320px) rotateX(720deg) rotateY(720deg);
+      transform: translateZ(-160px) rotateX(720deg) rotateY(720deg);
     }
   }
+
+  .cube {
+    transform: translateZ(-160px);
+  }
+
+  .cube.show-front {
+    transform: translateZ(-160px) rotateY(0deg);
+  }
+  .cube.show-back {
+    transform: translateZ(-160px) rotateY(-180deg);
+  }
+  .cube.show-top {
+    transform: translateZ(-160px) rotateX(-90deg);
+  }
+  .cube.show-bottom {
+    transform: translateZ(-160px) rotateX(90deg);
+  }
+  .cube.show-left {
+    transform: translateZ(-160px) rotateY(90deg);
+  }
+  .cube.show-right {
+    transform: translateZ(-160px) rotateY(-90deg);
+  }
+
+  .cube-face-front {
+    transform: rotateY(0deg) translateZ(160px);
+  }
+  .cube-face-back {
+    transform: rotateY(180deg) translateZ(160px);
+  }
+  .cube-face-top {
+    transform: rotateX(90deg) translateZ(160px);
+  }
+  .cube-face-bottom {
+    transform: rotateX(-90deg) translateZ(160px);
+  }
+  .cube-face-left {
+    transform: rotateY(-90deg) translateZ(160px);
+  }
+  .cube-face-right {
+    transform: rotateY(90deg) translateZ(160px);
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
 }
 
 .container {
@@ -41,7 +138,6 @@
     height: var(--cube-size);
     position: relative;
     transform-style: preserve-3d;
-    transform: translateZ(var(--translate-z-cube));
     transition: transform 2s;
   }
 
@@ -55,25 +151,6 @@
     font-weight: bold;
     color: white;
     text-align: center;
-  }
-
-  .cube.show-front {
-    transform: translateZ(var(--translate-z-cube) rotateY(0deg));
-  }
-  .cube.show-back {
-    transform: translateZ(var(--translate-z-cube) rotateY(-180deg));
-  }
-  .cube.show-top {
-    transform: translateZ(var(--translate-z-cube) rotateX(-90deg));
-  }
-  .cube.show-bottom {
-    transform: translateZ(var(--translate-z-cube) rotateX(90deg));
-  }
-  .cube.show-left {
-    transform: translateZ(var(--translate-z-cube) rotateY(90deg));
-  }
-  .cube.show-right {
-    transform: translateZ(var(--translate-z-cube) rotateY(-90deg));
   }
 
   // Spinning
@@ -101,24 +178,5 @@
   }
   .cube-face-right {
     background: var(--primary-color);
-  }
-
-  .cube-face-front {
-    transform: rotateY(0deg) translateZ(var(--translate-z-cube-pos));
-  }
-  .cube-face-back {
-    transform: rotateY(180deg) translateZ(var(--translate-z-cube-pos));
-  }
-  .cube-face-top {
-    transform: rotateX(90deg) translateZ(var(--translate-z-cube-pos));
-  }
-  .cube-face-bottom {
-    transform: rotateX(-90deg) translateZ(var(--translate-z-cube-pos));
-  }
-  .cube-face-left {
-    transform: rotateY(-90deg) translateZ(var(--translate-z-cube-pos));
-  }
-  .cube-face-right {
-    transform: rotateY(90deg) translateZ(var(--translate-z-cube-pos));
   }
 }

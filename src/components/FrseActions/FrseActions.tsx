@@ -4,7 +4,7 @@ import "./FrseActions.scss";
 interface IFrseActions {}
 
 const FrseActions: React.FC<IFrseActions> = (props) => {
-  return <>Actions</>;
+  return <>actions</>;
 };
 
 export default FrseActions;

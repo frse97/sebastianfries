@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { FrseActions } from "../FrseActions";
 import { FrseCube } from "../FrseCube";
 import "./FrseMain.scss";
@@ -25,4 +25,4 @@ const FrseMain: React.FC<IFrseMain> = (props) => {
   );
 };
 
-export default FrseMain;
+export default memo(FrseMain);
