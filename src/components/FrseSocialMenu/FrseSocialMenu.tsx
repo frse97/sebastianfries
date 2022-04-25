@@ -38,14 +38,13 @@ const FrseSocialMenu: React.FC = () => {
           <span className="hamburger hamburger-3" />
         </div>
         <nav>
-          <div className={navItemClassName}>
-            <FontAwesomeIcon icon={faInstagram} />
-          </div>
+          <div className={navItemClassName}>🥱</div>
+          {/* 🤗 */}
           <div className={navItemClassName}>
             <span>☀️</span>
           </div>
           <div className={navItemClassName}>
-            <FontAwesomeIcon icon={faTwitter} />
+            <FontAwesomeIcon icon={faInstagram} />
           </div>
           <div className={navItemClassName}>
             <FontAwesomeIcon icon={faLinkedin} />
