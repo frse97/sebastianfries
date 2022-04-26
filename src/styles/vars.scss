@@ -2,11 +2,7 @@
   // Header
   --header-h: 90px;
   // Footer
-  --footer-h: 80px;
-  // Main Actions container
-  --main-actions: 80px;
+  --footer-h: 48px;
   // Main Cube container
-  --main-cube: calc(
-    100vh - var(--header-h) - var(--footer-h) - var(--main-actions)
-  );
+  --main-cube: calc(100vh - var(--header-h) - var(--footer-h));
 }

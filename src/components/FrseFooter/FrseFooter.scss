@@ -1,6 +1,18 @@
 .frse-footer {
   height: var(--footer-h);
   width: 100%;
-  background-color: var(--primary-color);
-  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: white;
+  color: black;
+  box-shadow: 0px 0px 8px 4px #cccccc;
+
+  .github {
+    margin-left: 4px;
+    color: var(--primary-color);
+    text-decoration: none;
+  }
 }

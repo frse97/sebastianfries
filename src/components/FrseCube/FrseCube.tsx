@@ -67,7 +67,7 @@ const FrseCube: React.FC<IFrseCube> = (props) => {
           <div className="cube-face cube-face-bottom">{bottom}</div>
         </div>
       </div>
-      <div className="radio-group">
+      {/* <div className="radio-group">
         <label>
           <input
             type="radio"
@@ -133,7 +133,7 @@ const FrseCube: React.FC<IFrseCube> = (props) => {
         <button onClick={handleOnSpin}>
           {isSpinning ? "Stop spinning" : "Start spinning"}
         </button>
-      </div>
+      </div> */}
     </>
   );
 };

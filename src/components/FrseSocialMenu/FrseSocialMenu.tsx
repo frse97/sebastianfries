@@ -2,11 +2,12 @@ import React, { useCallback, useState } from "react";
 import cs from "classnames";
 import "./FrseSocialMenu.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import {
-  faInstagram,
-  faLinkedin,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
+  faRotate,
+  faSun,
+  faUpDownLeftRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 const FrseSocialMenu: React.FC = () => {
   const [isToggled, setIsToggled] = useState(false);
@@ -38,10 +39,12 @@ const FrseSocialMenu: React.FC = () => {
           <span className="hamburger hamburger-3" />
         </div>
         <nav>
-          <div className={navItemClassName}>🥱</div>
-          {/* 🤗 */}
           <div className={navItemClassName}>
-            <span>☀️</span>
+            {/* <FontAwesomeIcon icon={faUpDownLeftRight} /> */}
+            <FontAwesomeIcon icon={faRotate} />
+          </div>
+          <div className={navItemClassName}>
+            <FontAwesomeIcon icon={faSun} />
           </div>
           <div className={navItemClassName}>
             <FontAwesomeIcon icon={faInstagram} />
@@ -49,11 +52,14 @@ const FrseSocialMenu: React.FC = () => {
           <div className={navItemClassName}>
             <FontAwesomeIcon icon={faLinkedin} />
           </div>
-          {/* ☀️ */}
         </nav>
       </div>
 
-      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <svg
+        className="nav-filter"
+        xmlns="http://www.w3.org/2000/svg"
+        version="1.1"
+      >
         <defs>
           <filter id="shadowed-goo">
             <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="8" />

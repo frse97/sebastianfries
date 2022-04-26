@@ -3,19 +3,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: var(--main-cube);
 
   // Cube container
   &-cube {
     width: 100%;
-    height: var(--main-cube);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-  &-actions {
-    width: 100%;
-    height: var(--main-actions);
-    background-color: green;
   }
 }

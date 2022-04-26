@@ -1,10 +1,15 @@
 .nav {
-  height: 100%;
-  padding: 20px;
   filter: url(#shadow-goo);
+}
+svg.nav-filter {
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 0;
 }
 
 .nav-item {
+  bottom: 40px !important;
   width: 50px;
   height: 50px;
   margin-left: -25px;
@@ -45,9 +50,8 @@
 .toggle,
 .wobble {
   position: absolute;
-  bottom: 35px;
-  left: 50%;
-  text-align: center;
+  bottom: 38px;
+  left: 196px;
   background-color: var(--primary-color);
   border-radius: 50%;
   cursor: pointer;
@@ -63,12 +67,12 @@
 }
 /* Wobble effect & Slideout nav */
 
-.wobble {
-  width: 70px;
-  height: 70px;
-  margin-left: -35px;
-  margin-top: -35px;
-}
+// .wobble {
+//   width: 70px;
+//   height: 70px;
+//   margin-left: -35px;
+//   margin-top: -35px;
+// }
 /* Slide-out */
 
 nav .slide-out:nth-child(1) {

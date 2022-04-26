@@ -1,5 +1,4 @@
 import React, { memo } from "react";
-import { FrseActions } from "../FrseActions";
 import { FrseAvatar } from "../FrseAvatar";
 import { FrseCube } from "../FrseCube";
 import "./FrseMain.scss";
@@ -31,9 +30,6 @@ const FrseMain: React.FC<IFrseMain> = (props) => {
           left="LEFT"
           right="RIGHT"
         />
-      </div>
-      <div className="frse-main-actions">
-        <FrseActions />
       </div>
     </main>
   );
