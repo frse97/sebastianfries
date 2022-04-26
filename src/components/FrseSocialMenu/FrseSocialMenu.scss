@@ -1,4 +1,6 @@
 .nav {
+  position: absolute;
+  left: 50%;
   filter: url(#shadow-goo);
 }
 svg.nav-filter {
@@ -51,7 +53,6 @@ svg.nav-filter {
 .wobble {
   position: absolute;
   bottom: 38px;
-  left: 196px;
   background-color: var(--primary-color);
   border-radius: 50%;
   cursor: pointer;
