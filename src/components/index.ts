@@ -4,4 +4,4 @@ export * from "./FrseFooter";
 export * from "./FrseHeader";
 export * from "./FrseMain";
 export * from "./FrsePortfolioLogo";
-export * from "./FrseSocialMenu";
+export * from "./FrseMenu";

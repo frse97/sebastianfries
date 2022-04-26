@@ -1,15 +1,32 @@
 import React, { useCallback, useState } from "react";
 import cs from "classnames";
-import "./FrseSocialMenu.scss";
+import "./FrseMenu.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import {
+  faMoon,
   faRotate,
   faSun,
   faUpDownLeftRight,
 } from "@fortawesome/free-solid-svg-icons";
 
-const FrseSocialMenu: React.FC = () => {
+type ITheme = "light" | "dark";
+
+interface IFrseMenu {
+  /**
+   * An identifier if the cube is spinning
+   */
+  spinning: boolean;
+  /**
+   * A method to change the spinning behaviour
+   */
+  onSpin: () => void;
+}
+
+const FrseMenu: React.FC<IFrseMenu> = (props) => {
+  const { spinning, onSpin } = props;
+
+  const [theme, setTheme] = useState<ITheme>("dark");
   const [isToggled, setIsToggled] = useState(false);
   const [ripple, setRipple] = useState(false);
 
@@ -20,6 +37,7 @@ const FrseSocialMenu: React.FC = () => {
     ripple: ripple,
   });
 
+  // Menu
   const handleOnToggle = useCallback(() => {
     setIsToggled(!isToggled);
     setRipple(true);
@@ -28,23 +46,37 @@ const FrseSocialMenu: React.FC = () => {
     }, 1200);
   }, [isToggled]);
 
+  // Theme change
+  const handleThemeChange = useCallback(() => {
+    theme === "light" ? setTheme("dark") : setTheme("light");
+    document.documentElement.setAttribute(
+      "data-theme",
+      theme === "light" ? "dark" : "light"
+    );
+  }, [theme]);
+
   return (
     <>
       <div className="nav">
         <div className={wobbleClassName} />
         <div className={wobbleClassName} />
-        <div id="toggle-nav" className="toggle" onClick={handleOnToggle}>
+        <div
+          id="toggle-nav"
+          className="toggle"
+          tabIndex={1}
+          onClick={handleOnToggle}
+          onKeyDown={handleOnToggle}
+        >
           <span className="hamburger hamburger-1" />
           <span className="hamburger hamburger-2" />
           <span className="hamburger hamburger-3" />
         </div>
         <nav>
-          <div className={navItemClassName}>
-            {/* <FontAwesomeIcon icon={faUpDownLeftRight} /> */}
-            <FontAwesomeIcon icon={faRotate} />
+          <div className={navItemClassName} onClick={onSpin}>
+            <FontAwesomeIcon icon={spinning ? faUpDownLeftRight : faRotate} />
           </div>
-          <div className={navItemClassName}>
-            <FontAwesomeIcon icon={faSun} />
+          <div className={navItemClassName} onClick={handleThemeChange}>
+            <FontAwesomeIcon icon={theme === "dark" ? faSun : faMoon} />
           </div>
           <div className={navItemClassName}>
             <FontAwesomeIcon icon={faInstagram} />
@@ -86,4 +118,4 @@ const FrseSocialMenu: React.FC = () => {
   );
 };
 
-export default FrseSocialMenu;
+export default FrseMenu;

@@ -27,15 +27,18 @@ interface IFrseCube {
    * The content of the right face
    */
   right?: ReactNode;
+  /**
+   * A flag identifying if the cube is spinning
+   */
+  spinning: boolean;
 }
 
 type CubeFaces = "front" | "back" | "left" | "right" | "top" | "bottom";
 
 const FrseCube: React.FC<IFrseCube> = (props) => {
-  const { front, back, top, bottom, left, right } = props;
+  const { front, back, top, bottom, left, right, spinning } = props;
 
   const [selected, setSelected] = useState<CubeFaces>("front");
-  const [isSpinning, setIsSpinning] = useState<boolean>(false);
 
   const cubeClassName = cs("cube", {
     "show-front": selected === "front",
@@ -44,15 +47,11 @@ const FrseCube: React.FC<IFrseCube> = (props) => {
     "show-bottom": selected === "bottom",
     "show-left": selected === "left",
     "show-right": selected === "right",
-    "is-spinning": isSpinning,
+    "is-spinning": spinning,
   });
 
   const handleOnChangeFace = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSelected(e.target.value as CubeFaces);
-  };
-
-  const handleOnSpin = () => {
-    isSpinning ? setIsSpinning(false) : setIsSpinning(true);
   };
 
   return (

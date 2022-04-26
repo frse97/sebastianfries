@@ -1,14 +1,37 @@
 import React, { memo } from "react";
-import { FrseSocialMenu } from "../FrseSocialMenu";
+import { FrseMenu } from "../FrseMenu";
 import "./FrseFooter.scss";
 
-const FrseFooter: React.FC = () => {
+interface IFooter {
+  /**
+   * An identifier if the cube is spinning
+   */
+  spinning: boolean;
+  /**
+   * A method to change the spinning behaviour
+   */
+  onSpin: () => void;
+}
+
+const FrseFooter: React.FC<IFooter> = (props) => {
+  const { spinning, onSpin } = props;
+
   return (
     <footer className="frse-footer">
-      <FrseSocialMenu />© Sebastian Fries 2022, check out this project on
-      <a className="github" href="#">
-        Github
-      </a>
+      <FrseMenu spinning={spinning} onSpin={onSpin} />
+      <span>© Sebastian Fries 2022 </span>
+      <div className="github-container">
+        <span>Check out this project on</span>
+        <a
+          aria-label="Sebastian Fries Portfolio Project on Github"
+          className="github"
+          target="_blank"
+          rel="noreferrer"
+          href="https://github.com/frse97/sebastianfries"
+        >
+          Github
+        </a>
+      </div>
     </footer>
   );
 };

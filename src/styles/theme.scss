@@ -1,19 +1,33 @@
 [data-vars="frse"] {
-  --light: #fcfcfc;
-  --dark: #2e2e2e;
   --primary-color: #e14571;
   --primary-color-light: #e4577f;
   --primary-color-dark: #ca3e65;
 }
 
 [data-theme="light"] {
+  // Generic
+  --light-txt: #fcfcfc;
+  --dark-txt: #121212;
+  --box-shadow-light: #cccccc;
+
   // Header
   --bg-color-header: #fcfcfc;
   --txt-color: #121212;
+
+  // Main
+  --bg-main: #2e2e2e;
 }
 
 [data-theme="dark"] {
-  // Header
-  --bg-color-header: #2e2e2e;
-  --txt-color: #fff;
+  // Generic
+  --light-txt: #fcfcfc;
+  --dark-txt: #121212;
+  --box-shadow-light: #cccccc;
+
+  // Header, Footer
+  --bg-color: #2e2e2e;
+  --txt-color: #fcfcfc;
+
+  // Main
+  --bg-main: #fcfcfc;
 }

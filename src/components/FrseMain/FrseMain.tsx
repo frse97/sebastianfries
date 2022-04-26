@@ -3,9 +3,16 @@ import { FrseAvatar } from "../FrseAvatar";
 import { FrseCube } from "../FrseCube";
 import "./FrseMain.scss";
 
-interface IFrseMain {}
+interface IFrseMain {
+  /**
+   * An identifier if the cube is spinning
+   */
+  spinning: boolean;
+}
 
 const FrseMain: React.FC<IFrseMain> = (props) => {
+  const { spinning } = props;
+
   return (
     <main className="frse-main">
       <div className="frse-main-cube">
@@ -29,6 +36,7 @@ const FrseMain: React.FC<IFrseMain> = (props) => {
           bottom="BOTTOM"
           left="LEFT"
           right="RIGHT"
+          spinning={spinning}
         />
       </div>
     </main>
