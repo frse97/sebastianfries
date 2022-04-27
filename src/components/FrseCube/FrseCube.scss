@@ -210,4 +210,9 @@
     top: calc(50% - 17px);
     right: -36px;
   }
+
+  &:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+  }
 }

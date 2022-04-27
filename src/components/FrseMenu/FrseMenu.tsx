@@ -30,6 +30,9 @@ const FrseMenu: React.FC<IFrseMenu> = (props) => {
   const [isToggled, setIsToggled] = useState(false);
   const [ripple, setRipple] = useState(false);
 
+  const hamburgerClassName = cs("hamburger", {
+    "is-open": isToggled,
+  });
   const navItemClassName = cs("nav-item", {
     "slide-out": isToggled,
   });
@@ -67,9 +70,7 @@ const FrseMenu: React.FC<IFrseMenu> = (props) => {
           onClick={handleOnToggle}
           onKeyDown={handleOnToggle}
         >
-          <span className="hamburger hamburger-1" />
-          <span className="hamburger hamburger-2" />
-          <span className="hamburger hamburger-3" />
+          <span className={hamburgerClassName} />
         </div>
         <nav>
           <div className={navItemClassName} onClick={onSpin}>
