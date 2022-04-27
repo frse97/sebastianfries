@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React from "react";
 import { FrsePortfolioLogo } from "../FrsePortfolioLogo";
 import "./FrseHeader.scss";
 
@@ -11,4 +11,4 @@ const FrseHeader: React.FC = () => {
   );
 };
 
-export default memo(FrseHeader);
+export default FrseHeader;

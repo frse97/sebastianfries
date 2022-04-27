@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React from "react";
 import { FrseMenu } from "../FrseMenu";
 import "./FrseFooter.scss";
 
@@ -36,4 +36,4 @@ const FrseFooter: React.FC<IFooter> = (props) => {
   );
 };
 
-export default memo(FrseFooter);
+export default FrseFooter;

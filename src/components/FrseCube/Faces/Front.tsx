@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React from "react";
 import { FrseAvatar } from "../../FrseAvatar";
 import Typewriter from "typewriter-effect";
 import "./Faces.scss";
@@ -31,4 +31,4 @@ const Front: React.FC = () => {
   );
 };
 
-export default memo(Front);
+export default Front;
