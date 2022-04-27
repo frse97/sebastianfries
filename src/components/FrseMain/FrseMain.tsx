@@ -16,28 +16,7 @@ const FrseMain: React.FC<IFrseMain> = (props) => {
   return (
     <main className="frse-main">
       <div className="frse-main-cube">
-        <FrseCube
-          front={
-            <div
-              style={{
-                position: "relative",
-                width: "100%",
-                height: "100%",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <FrseAvatar />
-            </div>
-          }
-          back="BACK"
-          top="TOP"
-          bottom="BOTTOM"
-          left="LEFT"
-          right="RIGHT"
-          spinning={spinning}
-        />
+        <FrseCube spinning={spinning} />
       </div>
     </main>
   );

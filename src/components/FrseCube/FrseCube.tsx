@@ -1,32 +1,16 @@
-import React, { ReactNode, useState } from "react";
+import React, { useCallback, useState } from "react";
 import cs from "classnames";
 import "./FrseCube.scss";
+import { Back, Bottom, Front, Left, Right, Top } from "./Faces";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronDown,
+  faChevronLeft,
+  faChevronRight,
+  faChevronUp,
+} from "@fortawesome/free-solid-svg-icons";
 
 interface IFrseCube {
-  /**
-   * The content of the front face
-   */
-  front?: ReactNode;
-  /**
-   * The content of the back face
-   */
-  back?: ReactNode;
-  /**
-   * The content of the top face
-   */
-  top?: ReactNode;
-  /**
-   * The content of the bottom face
-   */
-  bottom?: ReactNode;
-  /**
-   * The content of the left face
-   */
-  left?: ReactNode;
-  /**
-   * The content of the right face
-   */
-  right?: ReactNode;
   /**
    * A flag identifying if the cube is spinning
    */
@@ -36,7 +20,7 @@ interface IFrseCube {
 type CubeFaces = "front" | "back" | "left" | "right" | "top" | "bottom";
 
 const FrseCube: React.FC<IFrseCube> = (props) => {
-  const { front, back, top, bottom, left, right, spinning } = props;
+  const { spinning } = props;
 
   const [selected, setSelected] = useState<CubeFaces>("front");
 
@@ -50,89 +34,151 @@ const FrseCube: React.FC<IFrseCube> = (props) => {
     "is-spinning": spinning,
   });
 
-  const handleOnChangeFace = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSelected(e.target.value as CubeFaces);
+  const leftArrowClassNames = cs("arrow", "left-arrow", {
+    "is-visible": !spinning,
+  });
+  const topArrowClassNames = cs("arrow", "top-arrow", {
+    "is-visible": !spinning,
+  });
+  const rightArrowClassNames = cs("arrow", "right-arrow", {
+    "is-visible": !spinning,
+  });
+  const bottomArrowClassNames = cs("arrow", "bottom-arrow", {
+    "is-visible": !spinning,
+  });
+
+  const handleOnChangeFace = (face: CubeFaces) => {
+    setSelected(face);
   };
+
+  const handleLeftClick = useCallback(() => {
+    switch (selected) {
+      case "back":
+        handleOnChangeFace("right");
+        break;
+      case "bottom":
+        handleOnChangeFace("left");
+        break;
+      case "front":
+        handleOnChangeFace("left");
+        break;
+      case "left":
+        handleOnChangeFace("back");
+        break;
+      case "right":
+        handleOnChangeFace("front");
+        break;
+      case "top":
+        handleOnChangeFace("left");
+        break;
+    }
+  }, [selected]);
+
+  const handleTopClick = useCallback(() => {
+    switch (selected) {
+      case "back":
+        handleOnChangeFace("bottom");
+        break;
+      case "bottom":
+        handleOnChangeFace("front");
+        break;
+      case "front":
+        handleOnChangeFace("top");
+        break;
+      case "left":
+        handleOnChangeFace("top");
+        break;
+      case "right":
+        handleOnChangeFace("top");
+        break;
+      case "top":
+        handleOnChangeFace("back");
+        break;
+    }
+  }, [selected]);
+
+  const handleRightClick = useCallback(() => {
+    switch (selected) {
+      case "back":
+        handleOnChangeFace("left");
+        break;
+      case "bottom":
+        handleOnChangeFace("right");
+        break;
+      case "front":
+        handleOnChangeFace("right");
+        break;
+      case "left":
+        handleOnChangeFace("front");
+        break;
+      case "right":
+        handleOnChangeFace("back");
+        break;
+      case "top":
+        handleOnChangeFace("right");
+        break;
+    }
+  }, [selected]);
+
+  const handleBottomClick = useCallback(() => {
+    switch (selected) {
+      case "back":
+        handleOnChangeFace("top");
+        break;
+      case "bottom":
+        handleOnChangeFace("back");
+        break;
+      case "front":
+        handleOnChangeFace("bottom");
+        break;
+      case "left":
+        handleOnChangeFace("bottom");
+        break;
+      case "right":
+        handleOnChangeFace("bottom");
+        break;
+      case "top":
+        handleOnChangeFace("front");
+        break;
+    }
+  }, [selected]);
 
   return (
     <>
       <div className="container">
         <div className={cubeClassName}>
-          <div className="cube-face cube-face-front">{front}</div>
-          <div className="cube-face cube-face-back">{back}</div>
-          <div className="cube-face cube-face-left">{left}</div>
-          <div className="cube-face cube-face-right">{right}</div>
-          <div className="cube-face cube-face-top">{top}</div>
-          <div className="cube-face cube-face-bottom">{bottom}</div>
+          <div className="cube-face cube-face-front">
+            <Front />
+          </div>
+          <div className="cube-face cube-face-back">
+            <Back />
+          </div>
+          <div className="cube-face cube-face-left">
+            <Left />
+          </div>
+          <div className="cube-face cube-face-right">
+            <Right />
+          </div>
+          <div className="cube-face cube-face-top">
+            <Top />
+          </div>
+          <div className="cube-face cube-face-bottom">
+            <Bottom />
+          </div>
         </div>
-      </div>
-      {/* <div className="radio-group">
-        <label>
-          <input
-            type="radio"
-            name="rotate-cube"
-            value="front"
-            checked={selected === "front"}
-            onChange={handleOnChangeFace}
-          />
-          <span>Front</span>
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="rotate-cube"
-            value="back"
-            checked={selected === "back"}
-            onChange={handleOnChangeFace}
-          />
-          <span>Back</span>
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="rotate-cube"
-            value="left"
-            checked={selected === "left"}
-            onChange={handleOnChangeFace}
-          />
-          <span>Left</span>
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="rotate-cube"
-            value="right"
-            checked={selected === "right"}
-            onChange={handleOnChangeFace}
-          />
-          <span>Right</span>
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="rotate-cube"
-            value="top"
-            checked={selected === "top"}
-            onChange={handleOnChangeFace}
-          />
-          <span>Top</span>
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="rotate-cube"
-            value="bottom"
-            checked={selected === "bottom"}
-            onChange={handleOnChangeFace}
-          />
-          <span>Bottom</span>
-        </label>
-      </div>
-      <div className="buttons">
-        <button onClick={handleOnSpin}>
-          {isSpinning ? "Stop spinning" : "Start spinning"}
+        <button className={leftArrowClassNames}>
+          <FontAwesomeIcon icon={faChevronLeft} onClick={handleLeftClick} />
         </button>
-      </div> */}
+        <button className={topArrowClassNames}>
+          <FontAwesomeIcon icon={faChevronUp} onClick={handleTopClick} />
+        </button>
+        <button className={rightArrowClassNames}>
+          <FontAwesomeIcon icon={faChevronRight} onClick={handleRightClick} />
+        </button>
+        <button className={bottomArrowClassNames}>
+          <FontAwesomeIcon icon={faChevronDown} onClick={handleBottomClick} />
+        </button>
+      </div>
     </>
   );
 };

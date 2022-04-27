@@ -3,13 +3,16 @@ import "./App.scss";
 import { FrseHeader, FrseMain, FrseFooter } from "./components";
 
 const App: React.FC = () => {
+  const [firstRender, setFirstRender] = useState<boolean>(false);
   const [isSpinning, setIsSpinning] = useState<boolean>(false);
 
   useEffect(() => {
-    // Initialization
-    document.documentElement.setAttribute("data-theme", "dark");
-    document.documentElement.setAttribute("data-vars", "frse");
-  });
+    if (!firstRender) {
+      document.documentElement.setAttribute("data-theme", "dark");
+      document.documentElement.setAttribute("data-vars", "frse");
+    }
+    setFirstRender(true);
+  }, [firstRender]);
 
   const handleOnSpin = useCallback(() => {
     isSpinning ? setIsSpinning(false) : setIsSpinning(true);

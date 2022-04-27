@@ -8,7 +8,6 @@
   // Generic
   --light-txt: #fcfcfc;
   --dark-txt: #121212;
-  --box-shadow-light: #cccccc;
 
   // Header
   --bg-color-header: #fcfcfc;
@@ -16,13 +15,13 @@
 
   // Main
   --bg-main: #2e2e2e;
+  --bg-inverted: #fcfcfc;
 }
 
 [data-theme="dark"] {
   // Generic
   --light-txt: #fcfcfc;
   --dark-txt: #121212;
-  --box-shadow-light: #cccccc;
 
   // Header, Footer
   --bg-color: #2e2e2e;
@@ -30,4 +29,5 @@
 
   // Main
   --bg-main: #fcfcfc;
+  --bg-inverted: #2e2e2e;
 }
