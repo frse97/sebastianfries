@@ -15,7 +15,7 @@
     transform: translateZ(-120px) rotateX(0deg) rotateY(0deg);
   }
   100% {
-    transform: translateZ(-120px) rotateX(720deg) rotateY(720deg);
+    transform: translateZ(-120px) rotateX(360deg) rotateY(360deg);
   }
 }
 
@@ -71,7 +71,7 @@
       transform: translateZ(-140px) rotateX(0deg) rotateY(0deg);
     }
     100% {
-      transform: translateZ(-140px) rotateX(720deg) rotateY(720deg);
+      transform: translateZ(-140px) rotateX(360deg) rotateY(360deg);
     }
   }
 
