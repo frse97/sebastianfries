@@ -196,19 +196,23 @@
 
   &.left-arrow {
     top: calc(50% - 17px);
-    left: -36px;
+    // left: -36px;
+    right: 288px;
   }
   &.top-arrow {
-    top: -36px;
+    // top: -36px;
+    bottom: 288px;
     left: calc(50% - 17px);
   }
   &.bottom-arrow {
-    bottom: -36px;
+    // bottom: -36px;
+    top: 288px;
     left: calc(50% - 17px);
   }
   &.right-arrow {
     top: calc(50% - 17px);
-    right: -36px;
+    left: 288px;
+    // right: -36px;
   }
 
   &:hover {
