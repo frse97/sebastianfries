@@ -179,8 +179,23 @@
   }
 }
 
+.frse-cube-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .body-container {
+    display: flex;
+    align-items: center;
+
+    .container {
+      margin: 8px;
+    }
+  }
+}
+
 .arrow {
-  position: absolute;
   font-size: 28px;
   border: none;
   outline: none;
@@ -192,27 +207,6 @@
 
   &.is-visible {
     opacity: 1;
-  }
-
-  &.left-arrow {
-    top: calc(50% - 17px);
-    // left: -36px;
-    right: 288px;
-  }
-  &.top-arrow {
-    // top: -36px;
-    bottom: 288px;
-    left: calc(50% - 17px);
-  }
-  &.bottom-arrow {
-    // bottom: -36px;
-    top: 288px;
-    left: calc(50% - 17px);
-  }
-  &.right-arrow {
-    top: calc(50% - 17px);
-    left: 288px;
-    // right: -36px;
   }
 
   &:hover {

@@ -144,42 +144,52 @@ const FrseCube: React.FC<IFrseCube> = (props) => {
   }, [selected]);
 
   return (
-    <>
-      <div className="container">
-        <div className={cubeClassName}>
-          <div className="cube-face cube-face-front">
-            <Front />
-          </div>
-          <div className="cube-face cube-face-back">
-            <Back />
-          </div>
-          <div className="cube-face cube-face-left">
-            <Left />
-          </div>
-          <div className="cube-face cube-face-right">
-            <Right />
-          </div>
-          <div className="cube-face cube-face-top">
-            <Top />
-          </div>
-          <div className="cube-face cube-face-bottom">
-            <Bottom />
-          </div>
-        </div>
-        <button className={leftArrowClassNames}>
-          <FontAwesomeIcon icon={faChevronLeft} onClick={handleLeftClick} />
-        </button>
+    <div className="frse-cube-content">
+      <div className="top-arrow-container">
         <button className={topArrowClassNames}>
           <FontAwesomeIcon icon={faChevronUp} onClick={handleTopClick} />
         </button>
-        <button className={rightArrowClassNames}>
-          <FontAwesomeIcon icon={faChevronRight} onClick={handleRightClick} />
-        </button>
+      </div>
+      <div className="body-container">
+        <div className="left-arrow-container">
+          <button className={leftArrowClassNames}>
+            <FontAwesomeIcon icon={faChevronLeft} onClick={handleLeftClick} />
+          </button>
+        </div>
+        <div className="container">
+          <div className={cubeClassName}>
+            <div className="cube-face cube-face-front">
+              <Front />
+            </div>
+            <div className="cube-face cube-face-back">
+              <Back />
+            </div>
+            <div className="cube-face cube-face-left">
+              <Left />
+            </div>
+            <div className="cube-face cube-face-right">
+              <Right />
+            </div>
+            <div className="cube-face cube-face-top">
+              <Top />
+            </div>
+            <div className="cube-face cube-face-bottom">
+              <Bottom />
+            </div>
+          </div>
+        </div>
+        <div className="right-arrow-container">
+          <button className={rightArrowClassNames}>
+            <FontAwesomeIcon icon={faChevronRight} onClick={handleRightClick} />
+          </button>
+        </div>
+      </div>
+      <div className="bottom-arrow-container">
         <button className={bottomArrowClassNames}>
           <FontAwesomeIcon icon={faChevronDown} onClick={handleBottomClick} />
         </button>
       </div>
-    </>
+    </div>
   );
 };
 
