@@ -38,6 +38,83 @@
 // Top
 .top-content {
   background-color: var(--gray);
+
+  padding: 12px 8px;
+  color: var(--txt-color);
+
+  a {
+    text-decoration: none;
+  }
+  img {
+    height: 56px;
+  }
+
+  .top-row {
+    margin-bottom: 2vh;
+    text-align: center;
+  }
+  .wbi {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1vh;
+
+    .content {
+      display: flex;
+      align-items: center;
+
+      .title {
+        font-size: 14px;
+        margin-left: 12px;
+
+        a {
+          color: var(--primary-color);
+          margin-bottom: 0.4vh;
+        }
+      }
+    }
+    .stack {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1.2vh;
+
+      svg {
+        font-size: 24px;
+        margin-right: 8px;
+      }
+    }
+  }
+  .noragali {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1vh;
+
+    .content {
+      display: flex;
+      align-items: center;
+
+      .title {
+        font-size: 14px;
+        margin-left: 12px;
+
+        a {
+          color: var(--primary-color);
+          margin-bottom: 0.4vh;
+        }
+      }
+    }
+    .stack {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1.2vh;
+
+      svg {
+        font-size: 24px;
+        margin-right: 8px;
+      }
+    }
+  }
 }
 
 // Back
@@ -84,6 +161,76 @@
 // Bottom
 .bottom-content {
   background-color: var(--gray);
+  padding: 12px 8px;
+  color: var(--txt-color);
+
+  a {
+    text-decoration: none;
+  }
+  img {
+    height: 56px;
+  }
+
+  .top-row {
+    margin-bottom: 2vh;
+    text-align: center;
+  }
+  .rsc {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1vh;
+
+    .content {
+      display: flex;
+      align-items: center;
+
+      .title {
+        font-size: 14px;
+        margin-left: 12px;
+        color: var(--primary-color);
+        margin-bottom: 0.4vh;
+      }
+    }
+    .stack {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1.2vh;
+
+      svg {
+        font-size: 24px;
+        margin-right: 8px;
+      }
+    }
+  }
+  .shaggy {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1vh;
+
+    .content {
+      display: flex;
+      align-items: center;
+
+      .title {
+        font-size: 14px;
+        margin-left: 12px;
+        color: var(--primary-color);
+        margin-bottom: 0.4vh;
+      }
+    }
+    .stack {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1.2vh;
+
+      svg {
+        font-size: 24px;
+        margin-right: 8px;
+      }
+    }
+  }
 }
 
 // Left

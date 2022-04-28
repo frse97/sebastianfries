@@ -2,7 +2,7 @@ import React from "react";
 import "./Faces.scss";
 import Typewriter from "typewriter-effect";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEarthAmericas, faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { faEarthAmericas } from "@fortawesome/free-solid-svg-icons";
 
 const ItalyFlag: React.FC = () => {
   return (
