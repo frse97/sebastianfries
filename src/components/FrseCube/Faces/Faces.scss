@@ -89,6 +89,98 @@
 // Left
 .left-content {
   background-color: var(--primary-color);
+  background-color: var(--primary-color);
+  padding: 12px 8px;
+  color: var(--txt-color);
+
+  .top-row {
+    margin-bottom: 2vh;
+    text-align: center;
+  }
+  .timeline {
+    height: 80%;
+
+    .first,
+    .secondary,
+    .third,
+    .fourth {
+      display: flex;
+      align-items: center;
+
+      > div,
+      > svg {
+        margin-right: 8px;
+      }
+
+      .descr {
+        > span {
+          font-weight: bold;
+        }
+        .Typewriter {
+          font-size: 12px;
+        }
+      }
+    }
+    .first,
+    .secondary,
+    .third {
+      margin-bottom: 2vh;
+    }
+  }
+
+  .flag-italy,
+  .flag-austrian {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid var(--txt-color);
+  }
+  svg {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+
+  .flag-italy {
+    display: flex;
+    overflow: hidden;
+
+    .green,
+    .white,
+    .red {
+      height: 100%;
+      width: calc(40px / 3);
+    }
+    .green {
+      background-color: #008000;
+    }
+    .white {
+      background-color: #fff;
+    }
+    .red {
+      background-color: #e50000;
+    }
+  }
+
+  .flag-austrian {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    .red-first,
+    .white,
+    .red-second {
+      height: calc(40px / 3);
+      width: 100%;
+    }
+    .red-first,
+    .red-second {
+      background-color: #e50000;
+    }
+    .white {
+      background-color: #fff;
+    }
+  }
 }
 
 // Right

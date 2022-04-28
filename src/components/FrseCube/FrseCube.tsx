@@ -77,7 +77,7 @@ const FrseCube: React.FC<IFrseCube> = (props) => {
   const handleTopClick = useCallback(() => {
     switch (selected) {
       case "back":
-        handleOnChangeFace("bottom");
+        handleOnChangeFace("top");
         break;
       case "bottom":
         handleOnChangeFace("front");
@@ -123,7 +123,7 @@ const FrseCube: React.FC<IFrseCube> = (props) => {
   const handleBottomClick = useCallback(() => {
     switch (selected) {
       case "back":
-        handleOnChangeFace("top");
+        handleOnChangeFace("bottom");
         break;
       case "bottom":
         handleOnChangeFace("back");

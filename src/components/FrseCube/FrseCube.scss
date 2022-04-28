@@ -12,10 +12,11 @@
 // Animations needs fix values since css vars don't work
 @keyframes spinCube {
   0% {
-    transform: translateZ(-120px) rotateX(0deg) rotateY(0deg);
+    transform: translateZ(-120px) rotateX(0) rotateX(0) rotateZ(0);
   }
   100% {
-    transform: translateZ(-120px) rotateX(360deg) rotateY(360deg);
+    transform: translateZ(-120px) rotateX(720deg) rotateY(360deg)
+      rotateZ(360deg);
   }
 }
 
@@ -68,10 +69,11 @@
 
   @keyframes spinCube {
     0% {
-      transform: translateZ(-140px) rotateX(0deg) rotateY(0deg);
+      transform: translateZ(-140px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
     }
     100% {
-      transform: translateZ(-140px) rotateX(360deg) rotateY(360deg);
+      transform: translateZ(-140px) rotateX(720deg) rotateY(360deg)
+        rotateZ(360deg);
     }
   }
 
@@ -153,7 +155,7 @@
 
   // Spinning
   .cube.is-spinning {
-    animation: spinCube 32s infinite linear;
+    animation: spinCube 20s infinite linear;
     animation-fill-mode: both;
   }
 

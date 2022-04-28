@@ -80,10 +80,22 @@ const FrseMenu: React.FC<IFrseMenu> = (props) => {
             <FontAwesomeIcon icon={theme === "dark" ? faSun : faMoon} />
           </div>
           <div className={navItemClassName}>
-            <FontAwesomeIcon icon={faInstagram} />
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.instagram.com/essidbrot/"
+            >
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>{" "}
           </div>
           <div className={navItemClassName}>
-            <FontAwesomeIcon icon={faLinkedin} />
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.linkedin.com/in/sebastian-fries-7321a01a3/"
+            >
+              <FontAwesomeIcon icon={faLinkedin} />
+            </a>
           </div>
         </nav>
       </div>
