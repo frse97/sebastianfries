@@ -58,7 +58,7 @@ const Left: React.FC = () => {
                 strings: [
                   "Depression",
                   "Drugs",
-                  "Partys",
+                  "Partyies",
                   "Graduated from High-School",
                   "Military",
                   "WBI Wissensmanagement",
