@@ -13,8 +13,12 @@ This project is supposed to be a presentation of myself, as well as an interacti
 - Desktop optimization
 - Show "Content not available" in Landscape mode (small-devices)
 - Internationalization
+- Accessibility optimization
+- SEO optimization
+- Analysis optimization
 - Deep linking (set cube-face via url)
 - Extract projects in own pages
+- Add particles to background
 
 ## FixMe
 
