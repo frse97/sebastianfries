@@ -36,7 +36,7 @@ const Right: React.FC = () => {
         <span>Vue</span>
         <div className="star-container">
           <FontAwesomeIcon icon={faStar} />
-          <FontAwesomeIcon icon={faStar} />
+          <FontAwesomeIcon icon={faStarOutlined} />
           <FontAwesomeIcon icon={faStarOutlined} />
           <FontAwesomeIcon icon={faStarOutlined} />
           <FontAwesomeIcon icon={faStarOutlined} />

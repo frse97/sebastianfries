@@ -9,6 +9,7 @@ import {
   faLinkedin,
   faTwitter,
   faWhatsapp,
+  faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
 
 const Back: React.FC = () => {
@@ -30,15 +31,6 @@ const Back: React.FC = () => {
             <FontAwesomeIcon icon={faWhatsapp} />
           </a>
         </div>
-        <div className="entry">
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://www.linkedin.com/in/sebastian-fries-7321a01a3/"
-          >
-            <FontAwesomeIcon icon={faLinkedin} />
-          </a>
-        </div>
       </div>
       <div className="contacts-row">
         <div className="entry">
@@ -51,8 +43,28 @@ const Back: React.FC = () => {
           </a>
         </div>
         <div className="entry">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.tiktok.com/@sebastian.fries"
+          >
+            <FontAwesomeIcon icon={faTiktok} />
+          </a>
+        </div>
+        <div className="entry">
           <a target="_blank" rel="noreferrer" href="https://twitter.com/Frse97">
             <FontAwesomeIcon icon={faTwitter} />
+          </a>
+        </div>
+      </div>
+      <div className="contacts-row">
+        <div className="entry">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.linkedin.com/in/sebastian-fries-7321a01a3/"
+          >
+            <FontAwesomeIcon icon={faLinkedin} />
           </a>
         </div>
         <div className="entry">

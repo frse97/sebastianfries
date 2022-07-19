@@ -40,8 +40,6 @@ const Left: React.FC = () => {
                   "Middle School",
                   "CSI Delfino Fano",
                   "1th year High-School",
-                  "Friends i consider family",
-                  "First Joint",
                 ],
                 autoStart: true,
                 loop: true,
@@ -56,8 +54,8 @@ const Left: React.FC = () => {
             <Typewriter
               options={{
                 strings: [
-                  "Depression",
-                  "Drugs",
+                  "Personal problems",
+                  "Adolescence",
                   "Partyies",
                   "Graduated from High-School",
                   "Military",
@@ -76,12 +74,12 @@ const Left: React.FC = () => {
             <Typewriter
               options={{
                 strings: [
-                  "Live alone",
+                  "Start living alone",
                   "Homeoffice WBI",
                   "Started reading books",
                   "Started own projects",
                   "Started self-improvement",
-                  "Learned to love myself",
+                  "Started online-business",
                 ],
                 autoStart: true,
                 loop: true,
@@ -96,10 +94,10 @@ const Left: React.FC = () => {
             <Typewriter
               options={{
                 strings: [
-                  "Give value",
+                  "1% every day",
                   "Conquer the digital world",
-                  "Be happy, smile",
-                  "...",
+                  "Travel the world",
+                  "Have fun, stay focused, spread love!",
                 ],
                 autoStart: true,
                 loop: true,

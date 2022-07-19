@@ -1,7 +1,13 @@
 import React, { useMemo } from "react";
 import "./Faces.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLess, faReact, faSass } from "@fortawesome/free-brands-svg-icons";
+import {
+  faEthereum,
+  faLess,
+  faReact,
+  faSass,
+  faVuejs,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Top: React.FC = () => {
   const wbiLogoSrc = useMemo(
@@ -14,6 +20,12 @@ const Top: React.FC = () => {
     []
   );
   const noraGaliLogoAlt = useMemo(() => "NoraGali, SMM, Content Creator", []);
+
+  const cronoShaggyGalaxyLogoSrc = useMemo(
+    () => process.env.PUBLIC_URL + "/shaggy-logo.png",
+    []
+  );
+  const cronoShaggyGalaxyLogoAlt = useMemo(() => "Crono Shaggy Galaxy", []);
 
   return (
     <div className="top-content">
@@ -29,11 +41,11 @@ const Top: React.FC = () => {
             >
               WBI Wissensmanagement
             </a>
+            <div className="stack">
+              <FontAwesomeIcon icon={faReact} />
+              <FontAwesomeIcon icon={faLess} />
+            </div>
           </span>
-        </div>
-        <div className="stack">
-          <FontAwesomeIcon icon={faReact} />
-          <FontAwesomeIcon icon={faLess} />
         </div>
       </div>
       <div className="noragali">
@@ -43,11 +55,30 @@ const Top: React.FC = () => {
             <a href="https://www.noragali.it/" target="_blank" rel="noreferrer">
               NoraGali Homepage
             </a>
+            <div className="stack">
+              <FontAwesomeIcon icon={faReact} />
+              <FontAwesomeIcon icon={faSass} />
+            </div>
           </span>
         </div>
-        <div className="stack">
-          <FontAwesomeIcon icon={faReact} />
-          <FontAwesomeIcon icon={faSass} />
+      </div>
+      <div className="shaggy">
+        <div className="content">
+          <img src={cronoShaggyGalaxyLogoSrc} alt={cronoShaggyGalaxyLogoAlt} />
+          <span className="title">
+            <a
+              href="https://shaggygalaxy.club/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Crono Shaggy Galaxy
+            </a>
+            <div className="stack">
+              <FontAwesomeIcon icon={faVuejs} />
+              <FontAwesomeIcon icon={faSass} />
+              <FontAwesomeIcon icon={faEthereum} />
+            </div>
+          </span>
         </div>
       </div>
     </div>

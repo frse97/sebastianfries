@@ -19,6 +19,7 @@ This project is supposed to be a presentation of myself, as well as an interacti
 - Deep linking (set cube-face via url)
 - Extract projects in own pages
 - Add particles to background
+- Add image to display when sending links
 
 ## FixMe
 
